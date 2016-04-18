@@ -1,0 +1,163 @@
+<html lang="de-DE" class="js styleguide">
+<head>
+    <meta charset="utf-8">
+    <title>VOTUM Omni Toggle</title>
+</head>
+<body>
+
+    <section>
+        <header><h2>Toggle Single</h2></header>
+
+        <p>
+            <a href="#my-single-target" data-toggle=".my-single-target" data-toggle-text="Weniger anzeigen"
+               data-toggle-default-state="true" data-toggle-default-text="Mehr anzeigen"
+               data-vivaldi-spatnav-clickable="1">Mehr anzeigen</a>
+        </p>
+        <div id="my-single-target" class="my-single-target toggle-target" style="max-height: 90px;">
+            <h6>Zusätzliche Informationen</h6>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+
+            <input type="text" data-required="" data-required-switch="[data-toggle='.my-single-target']"
+                   data-has-update-input-required-attribute-handler="1">
+        </div>
+    </section>
+
+    <section>
+        <header><h2>Toggle Multiple</h2></header>
+
+        <div class="my-multi-target toggle-target">
+            <h6>Zusätzliche Informationen 1</h6>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        </div>
+
+        <p>
+            <button data-toggle=".my-multi-target, .my-multi-target2" data-toggle-text="Weniger anzeigen"
+                    data-toggle-default-state="true" data-toggle-default-text="Mehr anzeigen"
+                    data-vivaldi-spatnav-clickable="1">Mehr anzeigen
+            </button>
+        </p>
+
+        <div class="my-multi-target2 toggle-target">
+            <h6>Zusätzliche Informationen 2</h6>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        </div>
+    </section>
+
+    <section>
+        <header><h2>Toggle Inverse</h2></header>
+
+        <p>
+            <button data-toggle=".my-inverse-target, .my-inverse-target2" data-toggle-default-state="true"
+                    data-vivaldi-spatnav-clickable="1">Mehr anzeigen
+            </button>
+        </p>
+        <div class="my-inverse-target toggle-target">
+            <h6>Zusätzliche Informationen 1</h6>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        </div>
+        <div class="visible full my-inverse-target2 toggle-target" style="max-height: 43px;">
+            <h6>Zusätzliche Informationen 2</h6>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        </div>
+    </section>
+
+    <section>
+        <header><h2>Toggle Multi Button</h2></header>
+
+        <p>
+            <button id="multi-toggle-1-first-button" data-toggle=".my-first-target, .my-second-target"
+                    data-toggle-default-state="true" data-vivaldi-spatnav-clickable="1">First Button
+            </button>
+        </p>
+
+        <div class="visible full my-first-target toggle-no-animation toggle-target" style="max-height: 43px;">
+            <h6>Zusätzliche Informationen 1</h6>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        </div>
+
+        <div class="my-second-target toggle-no-animation toggle-target">
+            <h6>Zusätzliche Informationen 2</h6>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        </div>
+
+        <p>
+            <button id="multi-toggle-1-second-button" data-toggle=".my-third-target" data-toggle-default-state="true"
+                    data-vivaldi-spatnav-clickable="1">Second Button
+            </button>
+        </p>
+
+        <div class="my-third-target toggle-no-animation toggle-target">
+            <h6>Zusätzliche Informationen 3</h6>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        </div>
+    </section>
+
+    <section>
+        <header><h2>Radio Button Toggle</h2></header>
+
+        <p>
+            <input data-toggle=".my-first-radio-target, .my-second-radio-target" checked="" type="radio"
+                   name="radio-buttons" id="radio1" data-toggle-default-state="true">
+            <label class="inline-label" for="radio1">Privatkunde</label>
+            <input data-toggle=".my-second-radio-target, .my-first-radio-target" type="radio" name="radio-buttons"
+                   id="radio2" data-toggle-default-state="true">
+            <label class="inline-label" for="radio2">Geschäftskunde</label>
+        </p>
+
+        <div class="visible full my-first-radio-target toggle-no-animation toggle-target" style="max-height: 43px;">
+            <h6>Privatkunde</h6>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        </div>
+
+        <div class="my-second-radio-target toggle-no-animation toggle-target">
+            <h6>Geschäftskunde</h6>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        </div>
+    </section>
+
+    <section>
+        <header><h2>Checkbox Toggle</h2></header>
+
+        <p>
+            <input type="checkbox" name="some-checkbox" id="i-checkbox-toggle" data-toggle=".checkbox-target"
+                   data-toggle-text="Show contents below" data-toggle-default-state="true"
+                   data-toggle-default-text="">
+            <label class="inline-label" for="i-checkbox-toggle">Hide contents below</label>
+        </p>
+
+        <div class="visible full checkbox-target toggle-target" style="max-height: 43px;">
+            <h6>Geschäftskunde</h6>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+
+            <input type="text" data-required="" data-required-switch="input[type='checkbox'][name='some-checkbox']"
+                   data-required-switch-unchecked="" data-has-update-input-required-attribute-handler="1"
+                   required="required">
+        </div>
+    </section>
+
+    <script src="../bower_components/requirejs/require.js" data-main="example.js"></script>
+
+</body>
+</html>
