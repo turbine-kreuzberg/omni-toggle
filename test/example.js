@@ -1,5 +1,5 @@
 requirejs.config( {
-    baseUrl: '/src/'
+    baseUrl: '../src/'
 } );
 
 require( ['toggle'], function( Toggle ) {
