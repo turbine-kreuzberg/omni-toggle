@@ -12,11 +12,12 @@
     ],
     "license": "MIT",
     "private": true,
+    "dependencies": {
+        "requirejs": "latest"
+    },
     "ignore": [
         "**/.*",
-        "node_modules",
         "bower_components",
-        "test",
-        "tests"
+        "test"
     ]
 }
