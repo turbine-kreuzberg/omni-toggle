@@ -198,7 +198,7 @@ define( ['functions'], function( Functions ) {
          * @param {Element} toggleTrigger The  trigger element, which referred to the toggle contents with a selector in [data-toggle].
          * @return {boolean}
          */
-        initToggleTrigger: function( toggleTrigger ) {
+        init: function( toggleTrigger ) {
             if( !(toggleTrigger instanceof Element) ) {
                 console.error( 'initToggleTrigger(): The first parameter must be of type Element.' );
                 return false;
