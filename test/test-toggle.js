@@ -51,7 +51,7 @@ describe( 'Toggle', function() {
                     }
                 } );
 
-                it( 'changes state on click', function() {
+                it( 'changes state on click: to visible', function() {
                     toggleTrigger.dispatchEvent( new Event( 'click' ) );
 
                     /* The trigger should have a className "open" */
@@ -64,6 +64,40 @@ describe( 'Toggle', function() {
                     for( var i = 0; i < toggleTargetsLength; i++ ) {
                         toggleTargets[i].classList.contains( 'visible' ).should.be.true();
                     }
+                } );
+
+                it( 'prevent double click', function() {
+                    /* If a repeated click is triggered immediately, the plugin should do nothing */
+                    toggleTrigger.dispatchEvent( new Event( 'click' ) );
+
+                    /* The trigger should have a className "open" */
+                    toggleTrigger.classList.contains( 'open' ).should.be.true();
+
+                    /* Each toggle target should have a className "visible" */
+                    var toggleTargets = document.querySelectorAll( toggleTrigger.dataset.toggle ),
+                        toggleTargetsLength = toggleTargets.length;
+
+                    for( var i = 0; i < toggleTargetsLength; i++ ) {
+                        toggleTargets[i].classList.contains( 'visible' ).should.be.true();
+                    }
+                } );
+
+                it( 'changes state on click: to hidden', function() {
+                    /* Use a little delay, since the  */
+                    setTimeout( function() {
+                        toggleTrigger.dispatchEvent( new Event( 'click' ) );
+                        console.log( document.body.innerHTML );
+                        /* The trigger should have a className "open" */
+                        toggleTrigger.classList.contains( 'open' ).should.be.false();
+
+                        /* Each toggle target should have a className "visible" */
+                        var toggleTargets = document.querySelectorAll( toggleTrigger.dataset.toggle ),
+                            toggleTargetsLength = toggleTargets.length;
+
+                        for( var i = 0; i < toggleTargetsLength; i++ ) {
+                            toggleTargets[i].classList.contains( 'visible' ).should.be.false();
+                        }
+                    }, 500 );
                 } );
             } );
         })()
