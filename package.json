@@ -8,8 +8,8 @@
         "test": "test"
     },
     "scripts": {
-        "test": "karma start",
-        "test-once": "karma start --single-run",
+        "test": "karma start test/karma.conf.js",
+        "test-once": "karma start test/karma.conf.js --single-run",
         "lint": "eslint ./src/*.js; exit 0"
     },
     "repository": {
