@@ -200,7 +200,7 @@ define( ['functions'], function( Functions ) {
          */
         init: function( toggleTrigger ) {
             if( !(toggleTrigger instanceof Element) ) {
-                console.error( 'initToggleTrigger(): The first parameter must be of type Element.' );
+                console.error( 'Toggle.init(): The first parameter must be of type Element.' );
                 return false;
             }
 
@@ -210,7 +210,7 @@ define( ['functions'], function( Functions ) {
                 elementsToToggle = document.querySelectorAll( toggleTrigger.dataset[config.dataAttribute.toggle] );
             }
             catch( e ) {
-                console.error( 'initToggleTrigger(): Invalid selector for toggle target.' );
+                console.error( 'Toggle.init(): Invalid selector for toggle target.' );
                 return false;
             }
 
