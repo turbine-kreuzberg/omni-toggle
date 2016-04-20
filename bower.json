@@ -5,7 +5,7 @@
     "authors": [
         "Thomas Heuer <thomas.heuer@votum.de>"
     ],
-    "description": "A JavaScript module to toggle the visibility of one ore more HTML elements.",
+    "description": "A JavaScript module to toggle the visibility of one or multiple HTML elements.",
     "main": "test/example.js",
     "moduleType": [
         "amd"
