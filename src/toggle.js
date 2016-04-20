@@ -238,7 +238,7 @@ define( ['functions'], function( Functions ) {
 
             var toggleTriggerCount = toggleTriggers.length;
             for( var i = 0; i < toggleTriggerCount; i++ ) {
-                this.initToggleTrigger( toggleTriggers[i] );
+                this.init( toggleTriggers[i] );
             }
 
             return true;
