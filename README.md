@@ -35,4 +35,4 @@ npm run test-once
 
 ## License
 
-VOTUM Omni-Toggle is released under the MIT License. See the bundled [LICENSE](LICENSE.md) file for details.
+VOTUM Omni-Toggle is released under the MIT License. See the bundled [LICENSE](LICENSE) file for details.
