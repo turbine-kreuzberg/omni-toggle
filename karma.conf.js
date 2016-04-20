@@ -8,13 +8,15 @@ module.exports = function( config ) {
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['mocha', 'requirejs', 'should'],
+        frameworks: ['requirejs', 'mocha', 'should', 'fixture'],
 
         // list of files / patterns to load in the browser
         files: [
             'test/main.js',
             {pattern: 'src/*.js', included: false},
-            {pattern: 'test/*.js', included: false}
+            {pattern: 'test/*.js', included: false},
+
+            {pattern: 'test/html/*.htm'}
         ],
 
         // list of files to exclude
@@ -22,7 +24,9 @@ module.exports = function( config ) {
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-        preprocessors: {},
+        preprocessors: {
+            '**/*.htm': ['html2js'],
+        },
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
@@ -62,9 +66,9 @@ module.exports = function( config ) {
         }
     };
 
-    if (process.env.TRAVIS) {
+    if( process.env.TRAVIS ) {
         configuration.browsers = ['Chrome_Travis_Ci'];
     }
 
-    config.set(configuration);
+    config.set( configuration );
 }

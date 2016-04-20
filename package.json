@@ -1,35 +1,37 @@
 {
-    "name": "omni-toggle",
-    "version": "0.0.0",
-    "description": "A JavaScript module to toggle the visibility of one ore more HTML elements.",
-    "main": "test/test.js",
-    "directories": {
-        "doc": "docs",
-        "test": "test"
-    },
-    "scripts": {
-        "test": "./node_modules/karma/bin/karma start",
-        "test-once": "./node_modules/karma/bin/karma start --single-run"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/votum/omni-toggle.git"
-    },
-    "author": "",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/votum/omni-toggle/issues"
-    },
-    "devDependencies": {
-        "karma": "~0.13.22",
-        "mocha": "~2.4.5",
-        "karma-mocha": "~0.2.2",
-        "requirejs": "~2.2.0",
-        "karma-requirejs": "~0.2.6",
-        "should": "~8.3.1",
-        "karma-should": "~1.0.0",
-        "karma-chrome-launcher": "~0.2.3",
-        "karma-verbose-reporter": "0.0.3",
-        "karma-firefox-launcher": "~0.1.7"
-    }
+  "name": "omni-toggle",
+  "version": "0.0.0",
+  "description": "A JavaScript module to toggle the visibility of one ore more HTML elements.",
+  "main": "test/test.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start",
+    "test-once": "./node_modules/karma/bin/karma start --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/votum/omni-toggle.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/votum/omni-toggle/issues"
+  },
+  "devDependencies": {
+    "karma": "~0.13.22",
+    "mocha": "~2.4.5",
+    "karma-mocha": "~0.2.2",
+    "requirejs": "~2.2.0",
+    "karma-requirejs": "~0.2.6",
+    "should": "~8.3.1",
+    "karma-should": "~1.0.0",
+    "karma-chrome-launcher": "~0.2.3",
+    "karma-verbose-reporter": "0.0.3",
+    "karma-firefox-launcher": "~0.1.7",
+    "karma-fixture": "~0.2.6",
+    "karma-html2js-preprocessor": "~0.1.0"
+  }
 }
