@@ -117,4 +117,23 @@ describe( 'Toggle', function() {
         })()
     }
 
+    describe( 'radio buttons', function() {
+        var fixtureName = 'test/html/radio-button-toggle.htm';
+        var fixture = window.__html__[fixtureName];
+
+        before( function( done ) {
+            document.body.innerHTML = fixture;
+            done();
+        } );
+
+        it( 'switch the checked state on click', function() {
+            var firstRadio = document.getElementById('radio1');
+            var secondRadio = document.getElementById('radio2');
+            secondRadio.click();
+
+            firstRadio.checked.should.be.false();
+            secondRadio.checked.should.be.true();
+        });
+    });
+
 } );
