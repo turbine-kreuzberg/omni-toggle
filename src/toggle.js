@@ -175,7 +175,7 @@ define( ['functions'], function( Functions ) {
      */
     function listenToToggleEvent( toggleTrigger, elementsToToggle ) {
         var eventName = 'click';
-        if( requiresChangeEventListener() ) {
+        if( requiresChangeEventListener(toggleTrigger) ) {
             eventName = 'change';
         }
         toggleTrigger.addEventListener( eventName, toggleStates( toggleTrigger, elementsToToggle ) );
