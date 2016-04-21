@@ -2,7 +2,7 @@
 
 # VOTUM Omni-Toggle
 
-A simple plain JavaScript module to toggle the visibility of one or multiple HTML elements.
+VOTUM Omni-Toggle is a simple AMD JavaScript module to toggle the visibility of one or multiple HTML elements.
 
 ## Installation
 
