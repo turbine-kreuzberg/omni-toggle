@@ -5,8 +5,7 @@
  */
 define( ['functions'], function( Functions ) {
 
-    var config,
-        toggleStartEvent;
+    var config;
 
     config = {
         dataAttribute: {
