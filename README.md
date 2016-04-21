@@ -6,7 +6,7 @@ A simple plain JavaScript module to toggle the visibility of one or multiple HTM
 
 ## Installation
 
-You may use Bower to download the source and remove any unnecessary files: 
+You may use Bower to download the source and remove any unnecessary files:
 
 ```bash
 bower install omni-toggle
@@ -52,6 +52,13 @@ npm test
 
 ```bash
 npm run test-once
+```
+
+Additionally, to make sure you adhere to the coding style you should run
+[ESLint](http://eslint.org/):
+
+```bash
+npm run eslint
 ```
 
 ## License
