@@ -9,8 +9,11 @@ describe( 'Toggle', function() {
         } );
     } );
 
-    for( var fixtureName in window.__html__ ) {
+    var basicFixtures = ['test/html/multiple-toggle.htm', 'test/html/single-toggle.htm'];
+    for( var i=0; i<basicFixtures.length; i++){
         (function() {
+            var fixtureName = basicFixtures[i];
+
             var fixture = window.__html__[fixtureName];
             describe( fixtureName, function() {
                 var toggleTrigger,
