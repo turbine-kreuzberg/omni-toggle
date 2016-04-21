@@ -6,10 +6,31 @@ A simple plain JavaScript module to toggle the visibility of one or multiple HTM
 
 ## Installation
 
+You may use Bower to download the source and remove any unnecessary files: 
+
+```bash
+bower install omni-toggle
+```
+
 ## Usage Example
 
+In your website include Require.js and load the toggle script using AMD syntax:
 
-## Options Documentation
+```html
+<script src="bower_components/requirejs/require.js"></script>
+<script>
+requirejs.config( {
+    baseUrl: 'bower_components/omni-toggle/src/'
+} );
+
+require( ['toggle'], function( Toggle ) {
+    var toggleTrigger = document.querySelectorAll( '[data-toggle]' );
+    if( toggleTrigger.length > 0 ) {
+        Toggle.initToggleTriggerCollection( toggleTrigger );
+    }
+} );
+</script>
+```
 
 ## Development
 
