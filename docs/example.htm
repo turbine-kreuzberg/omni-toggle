@@ -9,6 +9,7 @@
         ('objectFit' in document.documentElement.style === false) && (document.documentElement.className += ' no-object-fit');
     </script>
     <link rel="stylesheet" href="../bower_components/base/dist/style.css">
+
     <style>
         .js .toggle-target {
             -moz-transition: max-height 300ms ease-in;
@@ -32,7 +33,14 @@
         .toggle-target.toggle-no-animation.visible {
             overflow: visible;
         }
+
+        /* Fix collapsing margins */
+        .toggle-target:before, .toggle-target:after{
+            content: ' ';
+            display: table;
+        }
     </style>
+
 </head>
 <body class="container clear">
 
