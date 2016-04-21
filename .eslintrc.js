@@ -48,7 +48,7 @@ module.exports = {
         "eqeqeq": "error",
         "func-names": "off",
         "func-style": [
-            "error",
+            "warn",
             "declaration"
         ],
         "generator-star-spacing": "error",
@@ -181,8 +181,8 @@ module.exports = {
         "operator-linebreak": "error",
         "padded-blocks": "off",
         "prefer-arrow-callback": "off",
-        "prefer-const": "error",
-        "prefer-reflect": "error",
+        "prefer-const": "off",
+        "prefer-reflect": "off",
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "off",
@@ -202,8 +202,8 @@ module.exports = {
                 "before": false
             }
         ],
-        "sort-imports": "error",
-        "sort-vars": "error",
+        "sort-imports": "off",
+        "sort-vars": "off",
         "space-before-blocks": "error",
         "space-before-function-paren": "off",
         "space-in-parens": "off",
@@ -225,7 +225,8 @@ module.exports = {
         "yield-star-spacing": "error",
         "yoda": [
             "error",
-            "never"
+            "never",
+            {"exceptRange": true}
         ]
     }
 };
