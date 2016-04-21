@@ -183,11 +183,11 @@ define( ['functions'], function( Functions ) {
      * Checks if the given element needs a change event listener instead of click.
      */
     function requiresChangeEventListener(element){
-      return element instanceof HTMLInputElement && (element.type === 'radio' || element.type === 'checkbox');
+        return element instanceof HTMLInputElement && (element.type === 'radio' || element.type === 'checkbox');
     }
 
     var module = {
-      
+
         /**
          * Toggle visibility of content elements with the given trigger. Needs an attribute [data-toggle] with a comma
          * separated list of CSS selectors as its value. All content matching the selectors will have a class .toggle-target
