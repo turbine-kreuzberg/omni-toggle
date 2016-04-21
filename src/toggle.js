@@ -62,7 +62,7 @@ define( ['functions'], function( Functions ) {
         return Functions.debounce( function( event ) {
             /* Just in case that the trigger was a link or submit button */
             if(!requiresChangeEventListener(trigger)){
-              event.preventDefault();
+                event.preventDefault();
             }
 
             /* The current initialStateFlag must be inverted */
