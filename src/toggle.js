@@ -172,13 +172,18 @@ define( ['functions'], function( Functions ) {
      * @param {NodeList} elementsToToggle
      */
     function listenToToggleInteraction( toggleTrigger, elementsToToggle ) {
-        /* Listen to the 'change' event for checkboxes and radio buttons */
-        if( toggleTrigger instanceof HTMLInputElement && (toggleTrigger.type === 'radio' || toggleTrigger.type === 'checkbox') ) {
-            toggleTrigger.addEventListener( 'change', toggleStates( toggleTrigger, elementsToToggle ) );
+        var eventName = 'click';
+        if( requiresChangeEventListener() ) {
+            eventName = 'change';
         }
-        else {
-            toggleTrigger.addEventListener( 'click', toggleStates( toggleTrigger, elementsToToggle ) );
-        }
+        toggleTrigger.addEventListener( eventName, toggleStates( toggleTrigger, elementsToToggle ) );
+    }
+
+    /**
+     * Checks if the given element needs a change event listener instead of click.
+     */
+    function requiresChangeEventListener(element){
+      return element instanceof HTMLInputElement && (element.type === 'radio' || element.type === 'checkbox');
     }
 
     var module = {
@@ -205,8 +210,7 @@ define( ['functions'], function( Functions ) {
 
             try {
                 elementsToToggle = document.querySelectorAll( toggleTrigger.dataset[config.dataAttribute.toggle] );
-            }
-            catch( e ) {
+            } catch( e ) {
                 console.error( 'Toggle.init(): Invalid selector for toggle target.' );
                 return false;
             }
