@@ -10,7 +10,8 @@
     "scripts": {
         "test": "karma start test/karma.conf.js",
         "test-once": "karma start test/karma.conf.js --single-run",
-        "lint": "eslint ./src/*.js"
+        "lint": "eslint ./src/*.js",
+        "build": "r.js -o .build.js"
     },
     "repository": {
         "type": "git",
