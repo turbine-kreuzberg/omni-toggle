@@ -22,14 +22,6 @@
             max-height: 0 !important;
         }
 
-        .js .toggle-target.full {
-            overflow: visible;
-        }
-
-        .js .toggle-target:not(.visible) {
-            margin-bottom: 0;
-        }
-
         .toggle-target.toggle-no-animation {
             -moz-transition: initial;
             -o-transition: initial;
@@ -96,13 +88,11 @@
         </p>
         <div class="my-inverse-target toggle-target">
             <h3>Additional Information 1</h3>
-
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
         </div>
         <div class="visible full my-inverse-target2 toggle-target" style="max-height: 43px;">
             <h3>Additional Information 2</h3>
-
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
         </div>
@@ -113,20 +103,17 @@
         <header><h2>Toggle Multi Button</h2></header>
 
         <p>
-            <button id="multi-toggle-1-first-button" data-toggle=".my-first-target, .my-second-target"
-                    data-toggle-default-state="true">First Button</button>
+            <button id="multi-toggle-1-first-button" data-toggle=".my-first-target, .my-second-target">First Button</button>
         </p>
 
-        <div class="visible full my-first-target toggle-no-animation toggle-target" style="max-height: 43px;">
+        <div class="visible full my-first-target toggle-no-animation">
             <h3>Additional Information 1</h3>
-
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
         </div>
 
-        <div class="my-second-target toggle-no-animation toggle-target">
+        <div class="my-second-target toggle-no-animation">
             <h3>Additional Information 2</h3>
-
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
         </div>
@@ -136,7 +123,7 @@
               data-toggle-default-state="true">Second Button</button>
         </p>
 
-        <div class="my-third-target toggle-no-animation toggle-target">
+        <div class="my-third-target toggle-no-animation">
             <h3>Additional Information 3</h3>
 
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor

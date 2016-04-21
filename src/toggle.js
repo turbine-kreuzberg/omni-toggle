@@ -61,7 +61,9 @@ define( ['functions'], function( Functions ) {
     function toggleStates( trigger, elementsToToggle ) {
         return Functions.debounce( function( event ) {
             /* Just in case that the trigger was a link or submit button */
-            event.preventDefault();
+            if(!requiresChangeEventListener(trigger)){
+              event.preventDefault();
+            }
 
             /* The current initialStateFlag must be inverted */
             var isInitialToggleState = !(trigger.dataset[config.dataAttribute.initialStateFlag] === 'true');
