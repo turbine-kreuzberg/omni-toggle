@@ -1,10 +1,48 @@
-<html lang="de-DE">
+<html lang="de-DE" class="no-js">
 <head>
     <meta charset="utf-8">
     <title>VOTUM Omni Toggle</title>
+    <meta name="robots" content="NOINDEX,NOFOLLOW">
+    <script>
+        document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+        document.documentMode && (document.documentElement.className += ' ie' + document.documentMode + 'mode');
+        ('objectFit' in document.documentElement.style === false) && (document.documentElement.className += ' no-object-fit');
+    </script>
     <link rel="stylesheet" href="../bower_components/base/dist/style.css">
+    <style>
+        .js .toggle-target {
+            -moz-transition: max-height 300ms ease-in;
+            -o-transition: max-height 300ms ease-in;
+            -webkit-transition: max-height 300ms ease-in;
+            transition: max-height 300ms ease-in;
+            overflow: hidden;
+        }
+
+        .js .toggle-target:not(.visible) {
+            max-height: 0 !important;
+        }
+
+        .js .toggle-target.full {
+            overflow: visible;
+        }
+
+        .js .toggle-target:not(.visible) {
+            margin-bottom: 0;
+        }
+
+        .toggle-target.toggle-no-animation {
+            -moz-transition: initial;
+            -o-transition: initial;
+            -webkit-transition: initial;
+            transition: initial;
+        }
+
+        .toggle-target.toggle-no-animation.visible {
+            overflow: visible;
+        }
+    </style>
 </head>
-<body class="clear">
+<body class="container clear">
 
     <header class="col-12">
         <h1>VOTUM Omni-Toggle Examples</h1>
@@ -14,24 +52,22 @@
         <header><h2>Toggle Single</h2></header>
 
         <p>
-            <a href="#my-single-target" data-toggle=".my-single-target" data-toggle-text="Show Less"
-               data-toggle-default-state="true" data-toggle-default-text="Show More">Show More</a>
+            <a href="#my-single-target" data-toggle=".my-single-target" data-toggle-text="Show Less">Show More</a>
         </p>
-        <div id="my-single-target" class="my-single-target toggle-target" style="max-height: 90px;">
-            <h6>Additional Information</h6>
+        <div id="my-single-target" class="my-single-target">
+            <h3>Additional Information</h3>
 
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-
-            <input type="text">
         </div>
+        <hr />
     </section>
 
     <section class="col-12">
         <header><h2>Toggle Multiple</h2></header>
 
         <div class="my-multi-target toggle-target">
-            <h6>Additional Information 1</h6>
+            <h3>Additional Information 1</h3>
 
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
@@ -43,32 +79,34 @@
         </p>
 
         <div class="my-multi-target2 toggle-target">
-            <h6>Additional Information</h6>
+            <h3>Additional Information</h3>
 
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
         </div>
+        <hr />
     </section>
 
     <section class="col-12">
         <header><h2>Toggle Inverse</h2></header>
 
         <p>
-            <button data-toggle=".my-inverse-target, .my-inverse-target2" data-toggle-default-state="true"
-                    data-vivaldi-spatnav-clickable="1">Show More</button>
+            <button data-toggle=".my-inverse-target, .my-inverse-target2"
+              data-toggle-default-state="true">Show More</button>
         </p>
         <div class="my-inverse-target toggle-target">
-            <h6>Additional Information 1</h6>
+            <h3>Additional Information 1</h3>
 
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
         </div>
         <div class="visible full my-inverse-target2 toggle-target" style="max-height: 43px;">
-            <h6>Additional Information 2</h6>
+            <h3>Additional Information 2</h3>
 
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
         </div>
+        <hr />
     </section>
 
     <section class="col-12">
@@ -80,14 +118,14 @@
         </p>
 
         <div class="visible full my-first-target toggle-no-animation toggle-target" style="max-height: 43px;">
-            <h6>Additional Information 1</h6>
+            <h3>Additional Information 1</h3>
 
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
         </div>
 
         <div class="my-second-target toggle-no-animation toggle-target">
-            <h6>Additional Information 2</h6>
+            <h3>Additional Information 2</h3>
 
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
@@ -99,11 +137,12 @@
         </p>
 
         <div class="my-third-target toggle-no-animation toggle-target">
-            <h6>Additional Information 3</h6>
+            <h3>Additional Information 3</h3>
 
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
         </div>
+        <hr />
     </section>
 
     <section class="col-12">
@@ -111,46 +150,40 @@
 
         <p>
             <input data-toggle=".my-first-radio-target, .my-second-radio-target" checked="" type="radio"
-                   name="radio-buttons" id="radio1" data-toggle-default-state="true">
+                   name="radio-buttons" id="radio1">
             <label class="inline-label" for="radio1">Private</label>
             <input data-toggle=".my-second-radio-target, .my-first-radio-target" type="radio" name="radio-buttons"
-                   id="radio2" data-toggle-default-state="true">
+                   id="radio2">
             <label class="inline-label" for="radio2">Company</label>
         </p>
-
-        <div class="visible full my-first-radio-target toggle-no-animation toggle-target" style="max-height: 43px;">
-            <h6>Private</h6>
-
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-        </div>
-
-        <div class="my-second-radio-target toggle-no-animation toggle-target">
-            <h6>Company</h6>
+        <div class="visible full my-first-radio-target toggle-no-animation">
+            <h3>Private</h3>
 
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
         </div>
+        <div class="my-second-radio-target toggle-no-animation">
+            <h3>Company</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        </div>
+        <hr />
     </section>
 
     <section class="col-12">
         <header><h2>Checkbox Toggle</h2></header>
-
         <p>
             <input type="checkbox" name="some-checkbox" id="i-checkbox-toggle" data-toggle=".checkbox-target"
                    data-toggle-text="Show contents below" data-toggle-default-state="true"
                    data-toggle-default-text="">
             <label class="inline-label" for="i-checkbox-toggle">Hide contents below</label>
         </p>
-
         <div class="visible full checkbox-target toggle-target" style="max-height: 43px;">
-            <h6>Company</h6>
-
+            <h3>Company</h3>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-
-            <input type="text" />
         </div>
+        <hr />
     </section>
 
     <script src="../bower_components/requirejs/require.js" data-main="example.js"></script>
