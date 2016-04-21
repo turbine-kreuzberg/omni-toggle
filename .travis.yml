@@ -1,11 +1,13 @@
 language: node_js
 node_js:
     - "0.10"
-script: npm run test-once
+script:
+  - npm run lint
+  - npm run test-once
 before_install:
     - export CHROME_BIN=chromium-browser
     - export DISPLAY=:99.0
     - sh -e /etc/init.d/xvfb start
     - sleep 3 # give xvfb some time to start
-before_script:
+install:
     - npm install
