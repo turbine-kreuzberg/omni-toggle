@@ -1,24 +1,25 @@
 {
-    "name": "omni-toggle",
-    "homepage": "https://github.com/votum/omni-toggle",
-    "authors": [
-        "Thomas Heuer <thomas.heuer@votum.de>",
-        "Josue Frade <josue.frade@votum.de",
-        "Dominik Horb <dominik.horb@votum.de"
-    ],
-    "description": "A JavaScript module to toggle the visibility of one or multiple HTML elements.",
-    "moduleType": [
-        "amd"
-    ],
-    "license": "MIT",
-    "dependencies": {
-        "requirejs": "latest"
-    },
-    "ignore": [
-        "**/.*",
-        "bower_components",
-        "node_modules",
-        "test",
-        "*.json"
-    ]
+  "name": "omni-toggle",
+  "homepage": "https://github.com/votum/omni-toggle",
+  "authors": [
+    "Thomas Heuer <thomas.heuer@votum.de>",
+    "Josue Frade <josue.frade@votum.de",
+    "Dominik Horb <dominik.horb@votum.de"
+  ],
+  "description": "A JavaScript module to toggle the visibility of one or multiple HTML elements.",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "requirejs": "latest",
+    "base": "^2.8.3"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "test",
+    "*.json"
+  ]
 }
