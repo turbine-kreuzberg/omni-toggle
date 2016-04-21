@@ -23,6 +23,9 @@ describe( 'Basic setup', function() {
             Toggle.init.should.be.Function();
         } );
 
+        it( 'has public method initMultiple()', function() {
+            Toggle.initMultiple.should.be.Function();
+        } );
     } );
 
 } );

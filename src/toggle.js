@@ -5,9 +5,7 @@
  */
 define( ['functions'], function( Functions ) {
 
-    var config;
-
-    config = {
+    var config = {
         dataAttribute: {
             toggle: 'toggle',
             defaultText: 'toggleDefaultText',
@@ -223,13 +221,19 @@ define( ['functions'], function( Functions ) {
         },
 
         /**
-         * Initialize a list of toggle triggers at once from a NodeList[].
-         * See initToggleTrigger() for specifics on the requirements for the elements in the given collection.
+         * Initialize a list of toggle triggers at once from a NodeList. With
+         * the default configuration you can use:
          *
-         * @param toggleTriggers
+         * var toggleTrigger = document.querySelectorAll( '[data-toggle]' );
+         * Toggle.initMultiple( toggleTrigger );
+         *
+         * See initToggleTrigger() for specifics on the requirements for the
+         * elements in the collection.
+         *
+         * @param {NodeList} toggleTriggers
          * @return {boolean}
          */
-        initToggleTriggerCollection: function( toggleTriggers ) {
+        initMultiple: function( toggleTriggers ) {
             if( !(toggleTriggers instanceof NodeList) ) {
                 console.error( 'initToggleTriggerCollection(): The first parameter must be of type NodeList.' );
                 return false;
