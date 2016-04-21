@@ -166,12 +166,12 @@ define( ['functions'], function( Functions ) {
     }
 
     /**
-     * Setup the main event handlers
+     * Setup the main event handler for a toggle trigger.
      *
      * @param {Element|HTMLInputElement} toggleTrigger
      * @param {NodeList} elementsToToggle
      */
-    function listenToToggleInteraction( toggleTrigger, elementsToToggle ) {
+    function listenToToggleEvent( toggleTrigger, elementsToToggle ) {
         var eventName = 'click';
         if( requiresChangeEventListener() ) {
             eventName = 'change';
@@ -187,6 +187,7 @@ define( ['functions'], function( Functions ) {
     }
 
     var module = {
+      
         /**
          * Toggle visibility of content elements with the given trigger. Needs an attribute [data-toggle] with a comma
          * separated list of CSS selectors as its value. All content matching the selectors will have a class .toggle-target
@@ -216,10 +217,8 @@ define( ['functions'], function( Functions ) {
             }
 
             initTriggerElement( toggleTrigger );
-
             initToggleTargets( elementsToToggle );
-
-            listenToToggleInteraction( toggleTrigger, elementsToToggle );
+            listenToToggleEvent( toggleTrigger, elementsToToggle );
 
             return true;
         },
