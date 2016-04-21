@@ -1,21 +1,16 @@
 {
     "name": "omni-toggle",
-    "version": "0.0.0",
     "homepage": "https://github.com/votum/omni-toggle",
     "authors": [
         "Thomas Heuer <thomas.heuer@votum.de>"
     ],
     "description": "A JavaScript module to toggle the visibility of one or multiple HTML elements.",
-    "main": "test/example.js",
     "moduleType": [
         "amd"
     ],
     "license": "MIT",
-    "private": true,
     "dependencies": {
-        "requirejs": "latest",
-        "mocha": "~2.4.5",
-        "should": "shouldjs/should.js#~8.3.1"
+        "requirejs": "latest"
     },
     "ignore": [
         "**/.*",
