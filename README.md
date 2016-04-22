@@ -58,7 +58,7 @@ Additionally, to make sure you adhere to the coding style you should run
 [ESLint](http://eslint.org/):
 
 ```bash
-npm run eslint
+npm run lint
 ```
 
 ## License
