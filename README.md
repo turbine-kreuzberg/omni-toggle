@@ -2,7 +2,7 @@
 
 # VOTUM Omni-Toggle
 
-VOTUM Omni-Toggle is a simple AMD JavaScript module to toggle the visibility of one or multiple HTML elements.
+VOTUM Omni-Toggle is a simple AMD JavaScript module to toggle the visibility of one or multiple HTML elements (or rather CSS classes of elements). Configuration is 
 
 ## Installation
 
@@ -26,11 +26,13 @@ requirejs.config( {
 require( ['toggle'], function( Toggle ) {
     var toggleTrigger = document.querySelectorAll( '[data-toggle]' );
     if( toggleTrigger.length > 0 ) {
-        Toggle.initToggleTriggerCollection( toggleTrigger );
+        Toggle.initMultiple( toggleTrigger );
     }
 } );
 </script>
 ```
+
+For examples of the HTML markup to use, please take a look at the provided [examples](docs/example.htm).
 
 ## Development
 
