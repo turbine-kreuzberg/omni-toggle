@@ -5,26 +5,26 @@ describe( 'Basic setup', function() {
         define.should.have.property( 'amd' );
     } );
 
-    describe( 'Check Toggle module', function() {
-        var Toggle;
+    describe( 'Check Toggle module with default config', function() {
+        var toggle;
 
         beforeEach( function( done ) {
-            require( ['toggle'], function( _Toggle ) {
-                Toggle = _Toggle;
+            require( ['toggle'], function( Toggle ) {
+                toggle = new Toggle();
                 done();
             } );
         } );
 
         it( 'can load module', function() {
-            Toggle.should.exist;
+            toggle.should.exist;
         } );
 
         it( 'has public method init()', function() {
-            Toggle.init.should.be.Function();
+            toggle.init.should.be.Function();
         } );
 
         it( 'has public method initMultiple()', function() {
-            Toggle.initMultiple.should.be.Function();
+            toggle.initMultiple.should.be.Function();
         } );
     } );
 

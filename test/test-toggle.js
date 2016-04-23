@@ -1,10 +1,10 @@
 describe( 'Toggle', function() {
 
-    var Toggle;
+    var toggle;
 
     before( function( done ) {
-        require( ['toggle'], function( _Toggle ) {
-            Toggle = _Toggle;
+        require( ['toggle'], function( Toggle ) {
+            toggle = new Toggle();
             done();
         } );
     } );
@@ -43,7 +43,7 @@ describe( 'Toggle', function() {
                 } );
 
                 it( 'initialize toggle script', function() {
-                    status = Toggle.init( toggleTrigger );
+                    status = toggle.init( toggleTrigger );
                     status.should.be.true();
                 } );
 
