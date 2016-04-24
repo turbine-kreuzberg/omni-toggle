@@ -42,7 +42,7 @@ define( ['functions'], function( Functions ) {
          * This helper function replaces the default text content with an alternative text,
          * when the toggle was triggered.
          *
-         * @param {Element} trigger
+         * @param {Element} toggleTrigger
          * @param {Boolean} isInitialToggleState
          */
         function switchTexts( toggleTrigger, isInitialToggleState ) {
@@ -137,7 +137,7 @@ define( ['functions'], function( Functions ) {
 
             element.style.setProperty( 'max-height', 'none', 'important' );
 
-            /* Store teh computed Height of the toggled element */
+            /* Store the computed Height of the toggled element */
             computedMaxHeight = Math.ceil( element.offsetHeight );
 
             /* Remove all temporary styles again */

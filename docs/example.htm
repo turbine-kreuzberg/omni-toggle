@@ -1,12 +1,10 @@
-<html lang="de-DE" class="no-js">
+<html class="no-js">
 <head>
     <meta charset="utf-8">
-    <title>VOTUM Omni Toggle</title>
+    <title>VOTUM Omni-Toggle</title>
     <meta name="robots" content="NOINDEX,NOFOLLOW">
     <script>
         document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
-        document.documentMode && (document.documentElement.className += ' ie' + document.documentMode + 'mode');
-        ('objectFit' in document.documentElement.style === false) && (document.documentElement.className += ' no-object-fit');
     </script>
     <link rel="stylesheet" href="../bower_components/base/dist/style.css">
 
@@ -94,12 +92,12 @@
             <button data-toggle=".my-inverse-target, .my-inverse-target2"
               data-toggle-default-state="true">Show More</button>
         </p>
-        <div class="my-inverse-target toggle-target">
+        <div class="my-inverse-target">
             <h3>Additional Information 1</h3>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
         </div>
-        <div class="visible full my-inverse-target2 toggle-target" style="max-height: 43px;">
+        <div class="my-inverse-target2 toggle-target visible full">
             <h3>Additional Information 2</h3>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
@@ -108,13 +106,13 @@
     </section>
 
     <section class="col-12">
-        <header><h2>Toggle Multi Button</h2></header>
+        <header><h2>Toggle In Toggle</h2></header>
 
         <p>
             <button id="multi-toggle-1-first-button" data-toggle=".my-first-target, .my-second-target">First Button</button>
         </p>
 
-        <div class="visible full my-first-target">
+        <div class="my-first-target toggle-target visible full">
             <h3>Additional Information 1</h3>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
@@ -124,19 +122,19 @@
             <h3>Additional Information 2</h3>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+
+               <p>
+                 <button id="multi-toggle-1-second-button" data-toggle=".my-third-target">Second Button</button>
+               </p>
+
+               <div class="my-third-target">
+                 <h3>Additional Information 3</h3>
+
+                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                   invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                 </div>
         </div>
 
-        <p>
-            <button id="multi-toggle-1-second-button" data-toggle=".my-third-target"
-              data-toggle-default-state="true">Second Button</button>
-        </p>
-
-        <div class="my-third-target">
-            <h3>Additional Information 3</h3>
-
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-               invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-        </div>
         <hr />
     </section>
 
