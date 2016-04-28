@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/votum/omni-toggle.svg?branch=master)](https://travis-ci.org/votum/omni-toggle)
+[![Code Climate](https://codeclimate.com/github/votum/omni-toggle/badges/gpa.svg)](https://codeclimate.com/github/votum/omni-toggle)
 
 # VOTUM Omni-Toggle
 
