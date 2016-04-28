@@ -1,13 +1,16 @@
 language: node_js
 node_js:
-    - "0.10"
+- '0.10'
 script:
-  - npm run lint
-  - npm run test-once
+- npm run lint
+- npm run test-once
 before_install:
-    - export CHROME_BIN=chromium-browser
-    - export DISPLAY=:99.0
-    - sh -e /etc/init.d/xvfb start
-    - sleep 3 # give xvfb some time to start
+- export CHROME_BIN=chromium-browser
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sleep 3
 install:
-    - npm install
+- npm install
+notifications:
+  slack:
+    secure: IHqktWeko7q13HqIufIjtrLsUSbGgDZwlZLsX4bFl6Yg1txfCtaE7U9/oWevZmrY74WpryguVLHtH2xv8VQNLxRC2R3Fs6/eeiFLQ44XXDVT/2wITU8AWW7OH4R9xpXVGOK+/ovR0HwNNy5R/HNAHZw3PR+xkVcdo5SAr0oaP3hM8WyjwBMbfh6xMobeXRzdLfekKj6hiqqEtuVWt1fiBPC+HsSPnxcF4NTcg4KutrljIEno1pHnCLf0AwYaIEr4V8NV/9eyhLkOoxNZx97ONFqbv2ikW27vllJqubgKP2NgkOb3Y00ZSRmTKAVpKw0OE9+/qcPMLj0EUylIuAbId3hwgaJ+JEtGDLtDdrZmBqEfxf6x5UYoi6a1bMmjHp1ecR2cRV61FAzAMfozRBsJbNZcdHREFjRgpvWnNyOUIqITfE87MZxPLwB0H4rD/hisdsWLFf/65uEsWK1Snjr18VE7WtTB7TE0YN88XtW9Q+06yF54XjJLyP7mPNdQcP3AH8hmcEQYDFLB3mC9i9lk0eRmkQo+BJx6KPZfGUTWAc55jDmmjHfYlPNcZzn6eJLhoc4by8NsivkqH1XHQobnxioLjO3uFMUmsRhlr6O8fsr4sQ5J2DSBhtWIV7F6pBhVPXr/VcYjQjGVhYNjkGAPYLTu4ajDa1GQ9cYU1WZfrEk=
